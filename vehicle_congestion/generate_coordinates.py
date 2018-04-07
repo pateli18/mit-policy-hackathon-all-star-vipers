@@ -11,7 +11,7 @@ def generate_points(base_point, minimum, increment, maximum, output_filepath):
 	all_coordinates = []
 	for distance in range(minimum, maximum, increment):
 		distance /= 100
-		num_degrees = int(distance / .5 * 28)
+		num_degrees = int(distance / .5 * 2)
 		for degree in range(1, num_degrees + 1):
 			degree *= (360 / num_degrees) 
 			all_coordinates.append(get_new_lat_lng(base_point, degree, distance))
